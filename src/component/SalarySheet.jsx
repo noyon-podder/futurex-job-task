@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from "react-bootstrap/Table";
 import { useLoaderData } from 'react-router-dom';
-
+import "./style.css"
 const SalarySheet = () => {
     const salaryData = useLoaderData();
   return (
@@ -27,9 +27,9 @@ const SalarySheet = () => {
               <td>{salary.email}</td>
               <td>{salary.salary}</td>
               <td>{salary.date}</td>
-              <td className=''>
-                <button>Edit</button>
-                <button className='ms-4'>Delete</button>
+              <td className='d-flex '>
+                <button className='table-button'>Edit</button>
+                <button className='ms-4 table-second-button'>Delete</button>
               </td>
             </tr>
           ))}
