@@ -2,14 +2,16 @@ import React from 'react';
 import Table from "react-bootstrap/Table";
 import { useLoaderData } from 'react-router-dom';
 import "./style.css"
+import TopBar from './TopBar';
 const SalarySheet = () => {
     const salaryData = useLoaderData();
   return (
-    <section className='p-5 '>
+    <section className=''>
+      <TopBar/>
       <Table responsive>
         <thead className='bg-info'>
           <tr>
-            <th>#</th>
+            <th>No.</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
@@ -25,7 +27,7 @@ const SalarySheet = () => {
               <td>{salary.firstName}</td>
               <td>{salary.lastName}</td>
               <td>{salary.email}</td>
-              <td>{salary.salary}</td>
+              <td>${salary.salary}</td>
               <td>{salary.date}</td>
               <td className='d-flex '>
                 <button className='table-button'>Edit</button>
