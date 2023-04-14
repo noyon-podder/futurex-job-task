@@ -38,8 +38,9 @@ const AddEmployee = () => {
     }
   return (
     <div>
+        <h2 className='fs-2 fw-bold text-primary text-center py-3 bg-light text-capitalize'>Here you add your new employee</h2>
       <form onSubmit={handleFormData}>
-        <div className="w-50 mx-auto mt-5">
+        <div className="w-50 mx-auto mt-3">
           <input
             type="text"
             className="mb-3"
@@ -68,7 +69,7 @@ const AddEmployee = () => {
             className="mb-3"
             type="date"
             onChange={(e) => setDate(e.target.value)}
-            placeholder="Enter your salary range"
+            placeholder="Enter your salary date"
           />
           <input
             className="mb-3 bg-primary fw-semibold text-white"
